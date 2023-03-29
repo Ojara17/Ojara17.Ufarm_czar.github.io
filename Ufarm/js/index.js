@@ -78,7 +78,7 @@ $(document).ready(function() {
       // remove previous error messages
       $(".alert-danger").remove();
 
-      // display error messages one at a time
+      //display error messages one at a time
       if (errorMessages.length > 0) {
           event.preventDefault();
           var errorMessageHTML = "<div class='alert alert-danger'>";
@@ -86,9 +86,13 @@ $(document).ready(function() {
           for (var i = 0; i < errorMessages.length; i++) {
               errorMessageHTML += "<li>" + errorMessages[i] + "</li>";
           }
+    
+      
           errorMessageHTML += "</ul>";
           errorMessageHTML += "</div>";
-          $("#userID").after(errorMessageHTML);
+//$("#userID").after(errorMessageHTML);
+        $("#userID").after(errorMessages[0]);
+
       }
   });
 });
